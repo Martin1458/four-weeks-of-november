@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Salary counter</title>
+</head>
+<body>
+    <h1>Salary counter</h1>
+    <label>Salary:</label>
+    <input type="number" id="salary" min="0.00" /> 
+    
+    <label>Time period</label>
+    <select name="time_period" id="time_period">
+        <option value="second">Second</option>
+        <option value="minute">Minute</option>
+        <option value="hour">Hour</option>
+        <option value="day">Day</option>
+        <option value="week">Week</option>
+        <option value="month">Month</option>
+    </select>
+
+    <label>Currency</label>
+    <select name="currency" id="currency">
+        <option value="E">Eur</option>
+        <option value="CZK">CZK</option>
+    </select>
+
+    <label>You made:</label>
+    <span id="current_salary" style="color: aliceblue;"></span>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+</body>
+</html>
