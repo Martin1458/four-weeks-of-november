@@ -416,3 +416,11 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+**/.venv
+**/.vscode
+**/icons
+**/digit_imgs
+**/imgs
+week_idk/TaskbarFolderApp/bin
+*.sln
