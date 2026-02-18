@@ -7,7 +7,11 @@
         Background="Transparent"
         Topmost="True"
         ShowInTaskbar="False"
-        Height="50" Width="300">
+        Height="50" Width="300"
+        AllowDrop="True"
+        DragEnter="ContainerBorder_DragEnter"
+        DragLeave="ContainerBorder_DragLeave"
+        Drop="ContainerBorder_Drop">
     
     <!-- This Border is the "Colorful Section" -->
     <Border x:Name="ContainerBorder" 
@@ -15,17 +19,17 @@
             CornerRadius="10" 
             BorderBrush="White" 
             BorderThickness="2"
+            AllowDrop="True"
+            Drop="ContainerBorder_Drop"
+            DragEnter="ContainerBorder_DragEnter"
+            DragLeave="ContainerBorder_DragLeave"
+            DragOver="ContainerBorder_DragOver"
             MouseDown="ContainerBorder_MouseDown"
             MouseMove="ContainerBorder_MouseMove"
             MouseUp="ContainerBorder_MouseUp">
         
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!-- Dummy Icons -->
-            <Ellipse Width="30" Height="30" Fill="White" Margin="5"/>
-            <Ellipse Width="30" Height="30" Fill="White" Margin="5"/>
-            <Ellipse Width="30" Height="30" Fill="White" Margin="5"/>
-            <Ellipse Width="30" Height="30" Fill="White" Margin="5"/>
-            <Ellipse Width="30" Height="30" Fill="White" Margin="5"/>
+        <StackPanel x:Name="IconStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
         </StackPanel>
     </Border>
 </Window>
